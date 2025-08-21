@@ -1,79 +1,39 @@
-/* Custom CSS for Portfolio */
+/* 기본 폰트 및 스타일 설정 */
 body {
-  background-color: #f0f2f5; /* Light grey background */
-  color: #333;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    "Helvetica Neue", Arial, sans-serif;
-  line-height: 1.6;
+  font-family: "Noto Sans KR", sans-serif;
+  padding-top: 56px; /* 고정된 네비게이션 바 높이만큼 패딩 추가 */
 }
 
-header {
-  background: linear-gradient(135deg, #007bff, #0056b3); /* Blue gradient */
-  color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/* Hero 섹션 스타일 */
+#hero {
+  height: calc(100vh - 56px); /* 네비게이션 바 높이를 뺀 전체 화면 높이 */
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=1974&auto=format&fit=crop")
+      no-repeat center center;
+  background-size: cover;
 }
 
-.lead {
-  font-size: 1.25rem;
-  font-weight: 300;
-}
-
-/* Section Styling */
+/* 섹션 공통 패딩 */
 section {
-  padding: 50px 0;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-  color: #2c3e50;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-}
-
-/* Skill Card Animation */
-.skill-card,
+/* 카드 호버 효과 */
 .card {
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.skill-card:hover,
 .card:hover {
-  transform: translateY(-10px) scale(1.03);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+  transform: translateY(-10px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
 }
 
-.skill-card i {
-  color: #007bff; /* Accent color for icons */
-}
-
-/* Contact Link Animation */
-.contact-link {
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  text-decoration: none;
-  color: #333;
-}
-
-.contact-link:hover {
-  transform: scale(1.05);
-  background-color: #e9ecef;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Badge colors for projects */
-.badge.bg-primary {
-  background-color: #007bff !important;
-}
-
-.badge.bg-secondary {
-  background-color: #6c757d !important;
-}
-
-.badge.bg-info {
-  background-color: #17a2b8 !important;
+/* 입양 절차 아이콘 스타일 */
+#process .rounded-circle {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
